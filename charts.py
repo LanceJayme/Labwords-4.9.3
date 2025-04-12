@@ -11,6 +11,7 @@ def show_historical_chart(base_currency, target_currency, start_date, end_date):
         rates = list(historical_data.values())
         dates, rates = zip(*sorted(zip(dates, rates)))
 
+
         plt.figure(figsize=(10, 6))
         plt.plot(dates, rates, marker='o')
         plt.title(f'{base_currency.upper()} to {target_currency.upper()} Exchange Rate History')
